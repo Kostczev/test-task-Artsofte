@@ -5,11 +5,11 @@
         ←
     </button>
 
-    @for (page of getVisiblePages(); track $index) {
+    @for (page of visiblePages(); track $index) {
     @if (page === '...') {
     <span class="pagination__ellipsis">...</span>
     } @else {
-    <button class="pagination__button" [class.pagination__btn--active]="page === pagination().currentPage"
+    <button class="pagination__button" [class.active]="page === pagination().currentPage"
         (click)="goToPage(+page)">
         {{ page }}
     </button>

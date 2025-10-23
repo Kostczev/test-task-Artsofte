@@ -1,6 +1,6 @@
 .company-item {
     display: grid;
-    grid-template-columns: 128px 1fr;
+    grid-template-columns: auto 1fr;
     gap: 20px;
     transition: all .3s ease;
     padding: 12px;
@@ -9,7 +9,7 @@
 
     &:hover,
     &:focus {
-        background:var(--gray-color);
+        background: var(--gray-color);
     }
 
     &__info {
@@ -24,5 +24,13 @@
 
     &__industry {
         margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 500px) {
+    .company-item {
+        &__info {
+            padding: 8px 0;
+        }
     }
 }

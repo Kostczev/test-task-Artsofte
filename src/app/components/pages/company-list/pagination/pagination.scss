@@ -29,6 +29,7 @@
     &__button {
         background: var(--white-color);
         border: var(--gray-border);
+
         &:hover:not(:disabled),
         &:focus:not(:disabled) {
             box-shadow: var(--thin-blue-shadow);
@@ -41,10 +42,15 @@
             cursor: default;
         }
 
-        &--active {
+        &.active {
             background: var(--blue-color);
             color: var(--white-color);
             border-color: var(--blue-color);
+            
+            &:hover:not(:disabled),
+            &:focus:not(:disabled) {
+                color: var(--white-color);
+            }
         }
     }
 
@@ -59,5 +65,18 @@
         display: flex;
         align-items: center;
         height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagination {
+
+        &__button,
+        &__button-skeleton {
+            &--nav {
+                min-width: 40px;
+                font-weight: 500;
+            }
+        }
     }
 }

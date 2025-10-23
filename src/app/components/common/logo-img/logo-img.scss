@@ -33,6 +33,17 @@
     }
 }
 
+@media (max-width: 500px) {
+    .company-logo {
+        &__skeleton,
+        &__img,
+        &__placeholder {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
 @keyframes loading {
     0% {
         background-position: 200% 0;

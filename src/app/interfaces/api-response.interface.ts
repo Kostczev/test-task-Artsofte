@@ -1,5 +1,5 @@
 export interface ApiResponse<T> {
-    data: T[]
+    data: T[];
     total_pages: number;
     has_prev: boolean;
     has_next: boolean;

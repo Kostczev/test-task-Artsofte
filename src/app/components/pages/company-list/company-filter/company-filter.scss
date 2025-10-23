@@ -47,23 +47,29 @@
 }
 
 @media (max-width: 768px) {
-    .filter-form {
-        display: grid;
-        row-gap: 12px;
-        column-gap: 16px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-            'q q'
-            'type industry';
-        
-        &__q {
-            grid-area: q;
-        }
-        &__type {
-            grid-area: type;
-        }
-        &__industry {
-            grid-area: industry;
-        }
+  .filter-form {
+    display: grid;
+    row-gap: 12px;
+    column-gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'q q'
+      'type industry';
+
+    &__q {
+      grid-area: q;
     }
+
+    &__type {
+      grid-area: type;
+    }
+
+    &__industry {
+      grid-area: industry;
+    }
+
+    &__select {
+      min-width: unset;
+    }
+  }
 }
