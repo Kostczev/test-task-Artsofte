@@ -1,0 +1,27 @@
+.nav {
+    &__list {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__link {
+        display: block;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: all .3s ease;
+        box-shadow: var(--thin-blue-shadow);
+        
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 2px 2px var(--blue-color);
+            color: var(--blue-color);
+        }
+
+        &.active {
+            background: var(--blue-color);
+            color: var(--white-color);
+        }
+    }
+}

@@ -1,0 +1,50 @@
+:host {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 32px;
+    height: 100%;
+}
+
+.company-list {
+    &__search-param {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 32px;
+    }
+
+    &__wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:1150px) {
+    .company-list {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width:1023px) {
+    .company-list {
+        &__search-param {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .company-list {
+        &__search-param {
+            row-gap: 12px;
+        }
+    }
+}

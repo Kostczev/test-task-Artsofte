@@ -1,0 +1,14 @@
+<div class="company-logo">
+    @if (!imageLoaded && !imageError) {
+    <div class="company-logo__skeleton"></div>
+    }
+    @if (!imageError) {
+    <img [src]="logo" [alt]="businessName" (load)="onImageLoad()" (error)="onImageError()" [class.hidden]="!imageLoaded"
+        class="company-logo__img">
+    }
+    @if (imageError) {
+    <div class="company-logo__placeholder">
+        {{ getInitials() }}
+    </div>
+    }
+</div>

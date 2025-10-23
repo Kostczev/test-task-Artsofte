@@ -1,0 +1,17 @@
+<nav class="nav">
+    <ul class="nav__list">
+        @for(menuItem of menuItems; track menuItem.link) {
+            <li>
+                <a 
+                    [routerLink]="menuItem.link"
+                    routerLinkActive="active"
+                    class="nav__link"
+                >
+                    <span class="nav__text">
+                        {{ menuItem.lable }}
+                    </span>
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

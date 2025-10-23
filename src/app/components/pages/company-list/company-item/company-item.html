@@ -1,0 +1,13 @@
+<a
+    [routerLink]="['/detail', company.id]"
+    class="company-item"
+    title='Посмотреть детальней по компании "{{company.business_name}}"'
+    aria-label='Детальная информация о компании "{{company.business_name}}"'
+    >
+    <app-logo-img [logo]="company.logo" [businessName]="company.business_name"></app-logo-img>
+    <div class="company-item__info">
+        <p class="company-item__name">{{company.suffix}} "{{company.business_name}}"</p>
+        <p class="company-item__industry">{{company.industry}}</p>
+        <p class="company-item__type">{{company.type}}</p>
+    </div>
+</a>

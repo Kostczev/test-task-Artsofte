@@ -1,0 +1,40 @@
+.company-detail {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__industry {
+        margin-bottom: 24px;
+    }
+
+    &__slogan {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &__phone,
+    &__address {
+        display: grid;
+        grid-template-columns: 21px 1fr;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+
+        &::before {
+            content: '';
+            text-align: center;
+        }
+    }
+
+    &__phone::before {
+        content: '📞';
+    }
+
+    &__address::before {
+        content: '📍';
+    }
+}

@@ -1,0 +1,35 @@
+.company-sort {
+    &__label {
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--text-second-color);
+        font-size: 14px;
+    }
+
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    &__button {
+        display: flex;
+        gap: 8px;
+        padding: 10px 12px;
+        border: var(--gray-border);
+        border-radius: 6px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+
+        &:hover,
+        &:focus {
+            border-color: var(--blue-color);
+        }
+        
+        &.active {
+            border-color: var(--dark-blue-color);
+            color: var(--dark-blue-color);
+        }
+    }
+}

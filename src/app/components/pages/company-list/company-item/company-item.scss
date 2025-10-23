@@ -1,0 +1,28 @@
+.company-item {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: 20px;
+    transition: all .3s ease;
+    padding: 12px;
+    background: var(--white-color);
+    border-radius: 16px;
+
+    &:hover,
+    &:focus {
+        background:var(--gray-color);
+    }
+
+    &__info {
+        padding: 12px 0;
+    }
+
+    &__name {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 8px;
+    }
+
+    &__industry {
+        margin-bottom: 4px;
+    }
+}

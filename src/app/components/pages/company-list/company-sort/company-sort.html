@@ -1,0 +1,15 @@
+<div class="company-sort">
+    <p class="company-sort__label">Сортировать по:</p>
+    <div class="company-sort__wrapper">
+        @for(sortOption of sortOptions; track sortOption.field) {
+            <button 
+                (click)="toggleSort(sortOption.field)"
+                [class.active]="currentSort.field === sortOption.field"
+                class="company-sort__button"
+            >
+                <span class="company-sort__sort-label">{{sortOption.label}}</span>
+                <span class="company-sort__arrow">{{ getSortArrowDirection(sortOption.field) }}</span>
+            </button>
+        }
+    </div>
+</div>

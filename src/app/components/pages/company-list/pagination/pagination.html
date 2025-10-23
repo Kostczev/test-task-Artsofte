@@ -1,0 +1,32 @@
+@if (pagination().totalPages > 0) {
+<div class="pagination">
+    <button class="pagination__button pagination__button--nav" [disabled]="!pagination().hasPrev"
+        (click)="goToPage(pagination().currentPage - 1)">
+        ←
+    </button>
+
+    @for (page of getVisiblePages(); track $index) {
+    @if (page === '...') {
+    <span class="pagination__ellipsis">...</span>
+    } @else {
+    <button class="pagination__button" [class.pagination__btn--active]="page === pagination().currentPage"
+        (click)="goToPage(+page)">
+        {{ page }}
+    </button>
+    }
+    }
+
+    <button class="pagination__button pagination__button--nav" [disabled]="!pagination().hasNext"
+        (click)="goToPage(pagination().currentPage + 1)">
+        →
+    </button>
+</div>
+} @else {
+<div class="pagination__skeleton">
+    <div class="pagination__button-skeleton pagination__button-skeleton--nav">←</div>
+    <div class="pagination__button-skeleton"></div>
+    <div class="pagination__button-skeleton"></div>
+    <div class="pagination__button-skeleton"></div>
+    <div class="pagination__button-skeleton pagination__button-skeleton--nav">→</div>
+</div>
+}

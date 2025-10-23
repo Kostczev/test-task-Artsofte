@@ -21,6 +21,8 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "baseHref": "/test-task-Artsofte/",
+            "deployUrl": "/test-task-Artsofte/",
             "assets": [
               {
                 "glob": "**/*",

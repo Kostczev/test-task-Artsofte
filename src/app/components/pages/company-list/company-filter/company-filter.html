@@ -1,0 +1,26 @@
+<form class="filter-form" [formGroup]="searchForm">
+    <label for="search-input" class="filter-form__field filter-form__q">
+        <span class="filter-form__label">Ищем</span>
+        <input id="search-input" type="text" class="filter-form__input" formControlName="q">
+    </label>
+
+    <label for="company-type-select" class="filter-form__field filter-form__type">
+        <span class="filter-form__label">Тип компании</span>
+        <select id="company-type-select" class="filter-form__select" formControlName="company_type">
+            <option value="">Все типы</option>
+            @for(type of typeOptions; track type) {
+                <option [value]="type">{{type}}</option>
+            }
+        </select>
+    </label>
+
+    <label for="industry-select" class="filter-form__field filter-form__industry">
+        <span class="filter-form__label">Вид деятельности</span>
+        <select id="industry-select" class="filter-form__select" formControlName="industry">
+            <option value="">Все вид</option>
+            @for(industry of industryOptions; track industry) {
+                <option [value]="industry">{{industry}}</option>
+            }
+        </select>
+    </label>
+</form>

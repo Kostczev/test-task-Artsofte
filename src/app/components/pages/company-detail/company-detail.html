@@ -1,0 +1,20 @@
+@if( company$ | async; as company ) {
+<div class="company-detail">
+    <app-logo-img [logo]="company.logo" [businessName]="company.business_name"></app-logo-img>
+    <div class="company-detail__info">
+        <h1 class="company-detail__title">{{ company.suffix }} "{{ company.business_name }}"</h1>
+        <p class="company-detail__industry">{{ company.industry }} • {{ company.type }}</p>
+    
+        <div class="company-detail__content">
+          <p class="company-detail__slogan">{{ company.catch_phrase }}</p>
+          
+          <div class="company-detail__contacts">
+            <p class="company-detail__phone"> {{ company.phone_number }}</p>
+            <p class="company-detail__address"> {{ company.full_address }}</p>
+          </div>
+        </div>
+    </div>
+</div>
+} @else {
+    <div class="loading">Загрузка...</div>
+}

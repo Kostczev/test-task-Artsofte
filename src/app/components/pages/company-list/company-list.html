@@ -1,0 +1,18 @@
+<div class="company-list__search-param">
+    <app-company-sort></app-company-sort>
+    
+    <app-company-filter></app-company-filter>
+</div>
+
+<div class="company-list__wrapper">
+    @for(company of companies(); track company.id) {
+        <app-company-item [company]="company"></app-company-item>
+    }
+    @empty {
+        <div class="company-list__empty">
+            <p>Компании не найдены</p>
+        </div>
+    }
+</div>
+
+<app-pagination></app-pagination>
